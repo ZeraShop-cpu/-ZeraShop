@@ -3,42 +3,42 @@ const products = [
     id: 1,
     name: "T-Shirt",
     price: 20,
-    image: "images/tshirt.jpg",
+    image: "image/tshirt.jpg",
     category: "Men"
   },
   {
     id: 2,
     name: "Jeans",
     price: 35,
-    image: "images/jeans.jpg",
+    image: "image/jeans.jpg",
     category: "Men"
   },
   {
     id: 3,
     name: "Hoodie",
     price: 40,
-    image: "images/hoodie.jpg",
+    image: "image/hoodie.jpg",
     category: "Men"
   },
   {
     id: 4,
     name: "Dress",
     price: 30,
-    image: "images/dress.jpg",
+    image: "image/drees.jpg",
     category: "Women"
   },
   {
     id: 5,
     name: "Jacket",
     price: 55,
-    image: "images/jacket.jpg",
+    image: "image/jacket.jpg",
     category: "Women"
   },
   {
     id: 6,
     name: "Sneakers",
     price: 45,
-    image: "images/sneakers.jpg",
+    image: "image/sneakers.jpg",
     category: "Kids"
   }
 ];
@@ -55,9 +55,7 @@ function showProducts(list) {
     productsContainer.innerHTML += `
       <div class="card">
         <img src="${product.image}" alt="${product.name}">
-
         <h3>${product.name}</h3>
-
         <p>$${product.price}</p>
 
         <div class="buttons">
@@ -76,24 +74,28 @@ function showProducts(list) {
 
 function addToCart(id) {
   cart.push(id);
-  cartCount.textContent = cart.length;
+  if (cartCount) {
+    cartCount.textContent = cart.length;
+  }
 }
 
 function buyNow(id) {
   const product = products.find(p => p.id === id);
 
   alert(
-    "Product: " + product.name +
-    "\nPrice: $" + product.price +
-    "\n\nThank you for shopping at ZeraShop ❤️"
+    `Product: ${product.name}
+Price: $${product.price}
+
+Thank you for shopping at ZeraShop ❤️`
   );
 }
 
 function searchProducts() {
-  const value = document
-    .getElementById("search")
-    .value
-    .toLowerCase();
+  const search = document.getElementById("search");
+
+  if (!search) return;
+
+  const value = search.value.toLowerCase();
 
   const filtered = products.filter(product =>
     product.name.toLowerCase().includes(value)
@@ -102,16 +104,16 @@ function searchProducts() {
   showProducts(filtered);
 }
 
-document.querySelectorAll(".categories button").forEach(button => {
+const categoryButtons = document.querySelectorAll(".categories button");
+
+categoryButtons.forEach(button => {
   button.addEventListener("click", () => {
-    const category = button.textContent;
+    const category = button.textContent.trim();
 
     if (category === "All") {
       showProducts(products);
     } else {
-      showProducts(
-        products.filter(product => product.category === category)
-      );
+      showProducts(products.filter(product => product.category === category));
     }
   });
 });
