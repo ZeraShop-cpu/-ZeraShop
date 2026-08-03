@@ -40,6 +40,20 @@ const products = [
     price: 45,
     image: "images/sneakers.jpg",
     category: "Kids"
+  },
+  {
+    id: 7,
+    name: "Shoes",
+    price: 50,
+    image: "images/shoes.jpg",
+    category: "Men"
+  },
+  {
+    id: 8,
+    name: "Bag",
+    price: 25,
+    image: "images/bag.jpg",
+    category: "Women"
   }
 ];
 
