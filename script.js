@@ -30,31 +30,20 @@ let cart = [];
 function addToCart(id) {
   const product = products.find(p => p.id === id);
   cart.push(product);
-  updateCart();
   alert(product.name + " added to cart!");
 }
 
-function updateCart() {
-  const cartCount = document.getElementById("cart-count");
-  if (cartCount) {
-    cartCount.textContent = cart.length;
-  }
-}
+const container = document.getElementById("products");
 
-function searchProducts() {
-  const input = document
-    .getElementById("search")
-    .value.toLowerCase();
-
-  const cards = document.querySelectorAll(".product-card");
-
-  cards.forEach(card => {
-    const title = card.querySelector("h3").textContent.toLowerCase();
-
-    if (title.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
+products.forEach(product => {
+  container.innerHTML += `
+    <div class="product-card">
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>$${product.price}</p>
+      <button onclick="addToCart(${product.id})">
+        Add to Cart
+      </button>
+    </div>
+  `;
+});
