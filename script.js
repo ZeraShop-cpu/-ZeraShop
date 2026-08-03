@@ -15,40 +15,65 @@ const products = [
   },
   {
     id: 3,
-    name: "Hoodie",
+    name: "Black Hoodie",
     category: "Men",
     price: 40,
     image: "images/hoodie.jpg"
   },
   {
     id: 4,
-    name: "Jeans",
+    name: "Blue Jeans",
     category: "Men",
     price: 45,
     image: "images/jeans.jpg"
   },
   {
     id: 5,
-    name: "Jacket",
+    name: "Winter Jacket",
     category: "Women",
     price: 80,
     image: "images/jacket.jpg"
   },
   {
     id: 6,
-    name: "Sneakers",
+    name: "Kids Sneakers",
     category: "Kids",
     price: 70,
     image: "images/sneakers.jpg"
   }
 ];
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const container = document.getElementById("products");
 const searchInput = document.querySelector(".search input");
+const cartCount = document.getElementById("cart-count");
 
-function displayProducts(list) {
+updateCart();
+
+function updateCart() {
+  if (cartCount) {
+    cartCount.textContent = cart.length;
+  }
+}
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+
+  if (!product) return;
+
+  cart.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCart();
+
+  alert(product.name + " added to cart!");
+}
+
+function showProducts(list) {
+  if (!container) return;
+
   container.innerHTML = "";
 
   list.forEach(product => {
@@ -65,8 +90,17 @@ function displayProducts(list) {
   });
 }
 
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  cart.push(product);
+showProducts(products);
 
-  alert(`${product.name} added to cart!`);
+if (searchInput) {
+  searchInput.addEventListener("keyup", () => {
+    const value = searchInput.value.toLowerCase();
+
+    const result = products.filter(product =>
+      product.name.toLowerCase().includes(value) ||
+      product.category.toLowerCase().includes(value)
+    );
+
+    showProducts(result);
+  });
+}
