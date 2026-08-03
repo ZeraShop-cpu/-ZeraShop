@@ -55,7 +55,9 @@ function showProducts(list) {
     productsContainer.innerHTML += `
       <div class="card">
         <img src="${product.image}" alt="${product.name}">
+
         <h3>${product.name}</h3>
+
         <p>$${product.price}</p>
 
         <div class="buttons">
@@ -63,11 +65,10 @@ function showProducts(list) {
             Add to Cart
           </button>
 
-          <button class="buy-btn">
+          <button class="buy-btn" onclick="buyNow(${product.id})">
             Buy Now
           </button>
         </div>
-
       </div>
     `;
   });
@@ -75,45 +76,44 @@ function showProducts(list) {
 
 function addToCart(id) {
   cart.push(id);
-  if (cartCount) {
-    cartCount.innerHTML = cart.length;
-  }
+  cartCount.textContent = cart.length;
+}
+
+function buyNow(id) {
+  const product = products.find(p => p.id === id);
+
+  alert(
+    "Product: " + product.name +
+    "\nPrice: $" + product.price +
+    "\n\nThank you for shopping at ZeraShop ❤️"
+  );
 }
 
 function searchProducts() {
-  const search = document.getElementById("search");
+  const value = document
+    .getElementById("search")
+    .value
+    .toLowerCase();
 
-  if (!search) return;
-
-  const value = search.value.toLowerCase();
-
-  const result = products.filter(product =>
+  const filtered = products.filter(product =>
     product.name.toLowerCase().includes(value)
   );
 
-  showProducts(result);
+  showProducts(filtered);
 }
 
-function filterCategory(category) {
+document.querySelectorAll(".categories button").forEach(button => {
+  button.addEventListener("click", () => {
+    const category = button.textContent;
 
-  if (category === "All") {
-    showProducts(products);
-    return;
-  }
-
-  const result = products.filter(product =>
-    product.category === category
-  );
-
-  showProducts(result);
-}
-
-showProducts(products);
-
-const buttons = document.querySelectorAll(".categories button");
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterCategory(btn.innerText);
+    if (category === "All") {
+      showProducts(products);
+    } else {
+      showProducts(
+        products.filter(product => product.category === category)
+      );
+    }
   });
 });
+
+showProducts(products);
