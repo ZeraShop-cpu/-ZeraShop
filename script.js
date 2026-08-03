@@ -3,42 +3,42 @@ const products = [
     id: 1,
     name: "T-Shirt",
     price: 20,
-    image: "image/tshirt.jpg",
+    image: "images/tshirt.jpg",
     category: "Men"
   },
   {
     id: 2,
     name: "Jeans",
     price: 35,
-    image: "image/jeans.jpg",
+    image: "images/jeans.jpg",
     category: "Men"
   },
   {
     id: 3,
     name: "Hoodie",
     price: 40,
-    image: "image/hoodie.jpg",
+    image: "images/hoodie.jpg",
     category: "Men"
   },
   {
     id: 4,
     name: "Dress",
     price: 30,
-    image: "image/drees.jpg",
+    image: "images/drees.jpg",
     category: "Women"
   },
   {
     id: 5,
     name: "Jacket",
     price: 55,
-    image: "image/jacket.jpg",
+    image: "images/jacket.jpg",
     category: "Women"
   },
   {
     id: 6,
     name: "Sneakers",
     price: 45,
-    image: "image/sneakers.jpg",
+    image: "images/sneakers.jpg",
     category: "Kids"
   }
 ];
@@ -59,13 +59,8 @@ function showProducts(list) {
         <p>$${product.price}</p>
 
         <div class="buttons">
-          <button onclick="addToCart(${product.id})">
-            Add to Cart
-          </button>
-
-          <button class="buy-btn" onclick="buyNow(${product.id})">
-            Buy Now
-          </button>
+          <button onclick="addToCart(${product.id})">Add to Cart</button>
+          <button class="buy-btn" onclick="buyNow(${product.id})">Buy Now</button>
         </div>
       </div>
     `;
@@ -74,39 +69,23 @@ function showProducts(list) {
 
 function addToCart(id) {
   cart.push(id);
-  if (cartCount) {
-    cartCount.textContent = cart.length;
-  }
+  cartCount.textContent = cart.length;
 }
 
 function buyNow(id) {
   const product = products.find(p => p.id === id);
-
-  alert(
-    `Product: ${product.name}
-Price: $${product.price}
-
-Thank you for shopping at ZeraShop ❤️`
-  );
+  alert(`Product: ${product.name}\nPrice: $${product.price}\n\nThank you for shopping at ZeraShop ❤️`);
 }
 
 function searchProducts() {
-  const search = document.getElementById("search");
-
-  if (!search) return;
-
-  const value = search.value.toLowerCase();
-
+  const value = document.getElementById("search").value.toLowerCase();
   const filtered = products.filter(product =>
     product.name.toLowerCase().includes(value)
   );
-
   showProducts(filtered);
 }
 
-const categoryButtons = document.querySelectorAll(".categories button");
-
-categoryButtons.forEach(button => {
+document.querySelectorAll(".categories button").forEach(button => {
   button.addEventListener("click", () => {
     const category = button.textContent.trim();
 
