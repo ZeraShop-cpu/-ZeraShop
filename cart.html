@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZeraShop - Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="header">
+  <h1>ZeraShop</h1>
+  <nav>
+    <a href="index.html">🏠 Home</a>
+  </nav>
+</header>
+
+<section style="padding:30px;">
+  <h2>Your Shopping Cart</h2>
+
+  <div id="cart-items"></div>
+
+  <h2 id="total">Total: $0</h2>
+
+  <button onclick="checkout()">Checkout</button>
+  <button onclick="clearCart()">Clear Cart</button>
+</section>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartItems = document.getElementById("cart-items");
+const total = document.getElementById("total");
+
+function loadCart() {
+  cartItems.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<h3>Your cart is empty.</h3>";
+    total.textContent = "Total: $0";
+    return;
+  }
+
+  let sum = 0;
+
+  cart.forEach((item, index) => {
+    sum += item.price;
+
+    cartItems.innerHTML += `
+      <div class="card">
+        <img src="${item.image}" alt="${item.name}">
+        <h3>${item.name}</h3>
+        <p>$${item.price}</p>
+        <button onclick="removeItem(${index})">Remove</button>
+      </div>
+    `;
+  });
+
+  total.textContent = "Total: $" + sum;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+}
+
+function clearCart() {
+  cart = [];
+  localStorage.removeItem("cart");
+  loadCart();
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+
+  alert("Thank you for shopping at ZeraShop!");
+
+  cart = [];
+  localStorage.removeItem("cart");
+  loadCart();
+}
+
+loadCart();
+</script>
+
+</body>
+</html>
