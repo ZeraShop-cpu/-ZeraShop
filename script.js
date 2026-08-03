@@ -29,21 +29,25 @@ let cart = [];
 
 function addToCart(id) {
   const product = products.find(p => p.id === id);
+  if (!product) return;
+
   cart.push(product);
   alert(product.name + " added to cart!");
 }
 
 const container = document.getElementById("products");
 
-products.forEach(product => {
-  container.innerHTML += `
-    <div class="product-card">
-      <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-      <p>$${product.price}</p>
-      <button onclick="addToCart(${product.id})">
-        Add to Cart
-      </button>
-    </div>
-  `;
-});
+if (container) {
+  products.forEach(product => {
+    container.innerHTML += `
+      <div class="card">
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>$${product.price}</p>
+        <button onclick="addToCart(${product.id})">
+          Add to Cart
+        </button>
+      </div>
+    `;
+  });
+}
