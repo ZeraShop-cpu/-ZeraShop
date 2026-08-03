@@ -229,3 +229,18 @@ footer p{
 }
 
 }
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.buy-btn{
+    background:#28a745;
+    color:white;
+}
+
+.buy-btn:hover{
+    background:#1f8a38;
+}
