@@ -1,58 +1,57 @@
-// ZeraShop - Clothing Store
-
 const products = [
   {
     id: 1,
     name: "Men's T-Shirt",
+    category: "Men",
     price: 25,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+    image: "images/tshirt.jpg"
   },
   {
     id: 2,
     name: "Women's Dress",
+    category: "Women",
     price: 55,
-    image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600"
+    image: "images/dress.jpg"
   },
   {
     id: 3,
-    name: "Black Hoodie",
+    name: "Hoodie",
+    category: "Men",
     price: 40,
-    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600"
+    image: "images/hoodie.jpg"
   },
   {
     id: 4,
-    name: "Blue Jeans",
+    name: "Jeans",
+    category: "Men",
     price: 45,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"
+    image: "images/jeans.jpg"
   },
   {
     id: 5,
-    name: "Winter Jacket",
+    name: "Jacket",
+    category: "Women",
     price: 80,
-    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600"
+    image: "images/jacket.jpg"
   },
   {
     id: 6,
-    name: "White Sneakers",
+    name: "Sneakers",
+    category: "Kids",
     price: 70,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    image: "images/sneakers.jpg"
   }
 ];
 
 let cart = [];
 
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
-  if (!product) return;
-
-  cart.push(product);
-  alert(product.name + " added to cart!");
-}
-
 const container = document.getElementById("products");
+const searchInput = document.querySelector(".search input");
 
-if (container) {
-  products.forEach(product => {
+function displayProducts(list) {
+  container.innerHTML = "";
+
+  list.forEach(product => {
     container.innerHTML += `
       <div class="card">
         <img src="${product.image}" alt="${product.name}">
@@ -65,3 +64,9 @@ if (container) {
     `;
   });
 }
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  cart.push(product);
+
+  alert(`${product.name} added to cart!`);
