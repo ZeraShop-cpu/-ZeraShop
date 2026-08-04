@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Zera Shop</title>
 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.contact{
+width:90%;
+margin:70px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.info h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.info p{
+color:#666;
+margin-bottom:25px;
+line-height:1.8;
+}
+
+.info div{
+margin-bottom:20px;
+font-size:18px;
+}
+
+.info i{
+color:#2563eb;
+margin-right:10px;
+}
+
+form{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+input,
+textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+outline:none;
+}
+
+textarea{
+height:160px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png">
+<h2>Zera Shop</h2>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="icons">
+<a href="login.html"><i class="fa-regular fa-user"></i></a>
+<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+</div>
+
+</header>
+
+<section class="contact">
+
+<div class="info">
+
+<h1>Contact Us</h1>
+
+<p>
+Need help? Contact the Zera Shop team anytime.
+</p>
+
+<div><i class="fa-solid fa-envelope"></i> support@zerashop.com</div>
+
+<div><i class="fa-solid fa-phone"></i> +964 750 000 0000</div>
+
+<div><i class="fa-solid fa-location-dot"></i> Erbil, Iraq</div>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
