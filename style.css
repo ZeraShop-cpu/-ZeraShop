@@ -476,3 +476,30 @@ footer{
     padding:40px;
     margin-top:70px;
 }
+#themeBtn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.dark{
+    background:#111;
+    color:#fff;
+}
+
+.dark header,
+.dark nav,
+.dark .feature-box div,
+.dark .product-card,
+.dark footer{
+    background:#1b1b1b;
+    color:#fff;
+}
+
+.dark a{
+    color:#fff;
+}
