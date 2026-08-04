@@ -153,15 +153,71 @@ nav a:hover{
 ========================= */
 
 .hero{
-    width:90%;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-    background:linear-gradient(135deg,#dbeafe,#bfdbfe);
-    padding:70px;
+    width:92%;
+    margin:40px auto;
+    background:#dbeafe;
+    border-radius:35px;
+    padding:50px 30px;
+    text-align:center;
+}
+
+.hero .badge{
+    display:inline-block;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 28px;
     border-radius:30px;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:58px;
+    font-weight:800;
+    line-height:1.1;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:0 auto 35px;
+    font-size:21px;
+    line-height:1.8;
+    color:#555;
+}
+
+.hero button{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:18px 50px;
+    border-radius:18px;
+    font-size:22px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero button:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
+
+.hero img{
+    width:100%;
+    margin-top:45px;
+    border-radius:20px;
+    display:block;
+}
+
+    
+
+
+    
+    
+    
+    
 }
 
 .left span{
