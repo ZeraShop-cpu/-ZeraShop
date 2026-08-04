@@ -1,12 +1,238 @@
-ZeraShop/
-│── index.html
-│── style.css
-│── script.js
-│── login.html
-│── products.html
-│── about.html
-│── contact.html
-│── cart.html
-│
-├── images/
-└── icons/
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+width:100%;
+height:85px;
+padding:0 7%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+}
+
+.logo h2{
+font-size:28px;
+color:#2563eb;
+font-weight:700;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+font-size:16px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+.right{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.search{
+display:flex;
+align-items:center;
+background:#eef3ff;
+padding:12px 18px;
+border-radius:50px;
+}
+
+.search input{
+border:none;
+background:none;
+outline:none;
+width:220px;
+font-size:15px;
+}
+
+.search i{
+color:#2563eb;
+cursor:pointer;
+}
+
+.right>a{
+font-size:22px;
+transition:.3s;
+}
+
+.right>a:hover{
+color:#2563eb;
+}
+
+.hero{
+width:90%;
+margin:50px auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+padding:70px;
+border-radius:30px;
+}
+
+.left span{
+background:#2563eb;
+color:#fff;
+padding:8px 20px;
+border-radius:50px;
+font-size:14px;
+}
+
+.left h1{
+font-size:58px;
+margin:25px 0;
+line-height:1.2;
+}
+
+.left p{
+font-size:18px;
+color:#555;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.left button{
+padding:16px 42px;
+border:none;
+background:#2563eb;
+color:white;
+font-size:18px;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+.left button:hover{
+background:#1d4ed8;
+transform:translateY(-3px);
+}
+
+.right-image{
+text-align:center;
+}
+
+.right-image img{
+width:100%;
+max-width:520px;
+}
+
+.categories{
+width:90%;
+margin:70px auto;
+}
+
+.categories h2{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+}
+
+.category-box{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.item{
+background:#fff;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.item:hover{
+transform:translateY(-8px);
+}
+
+.item img{
+width:150px;
+height:150px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.item h3{
+font-size:20px;
+}
+
+@media(max-width:992px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.category-box{
+grid-template-columns:repeat(2,1fr);
+}
+
+nav{
+display:none;
+}
+
+.search input{
+width:120px;
+}
+
+}
+
+@media(max-width:600px){
+
+.category-box{
+grid-template-columns:1fr;
+}
+
+.left h1{
+font-size:36px;
+}
+
+.hero{
+padding:35px;
+}
+
+.search{
+display:none;
+}
+
+}
