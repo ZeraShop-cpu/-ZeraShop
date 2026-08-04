@@ -797,3 +797,44 @@ transform:translateY(0);
 footer{
     border-top:4px solid #2563eb;
 }
+... کۆدی style.css ـەکەت ...
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.footer-grid{
+    text-align:center;
+}
+
+.social{
+    justify-content:center;
+}
+
+}
+
+/* 👇 لێرە هەموو کۆدە نوێیەکان دابنێ */
+
+/* Active Link */
+nav a.active{
+    color:#2563eb;
+    font-weight:700;
+}
+
+/* Hover Animation */
+.card,
+.item,
+.feature-box div{
+    transition:.35s ease;
+}
+
+.card:hover,
+.item:hover,
+.feature-box div:hover{
+    transform:translateY(-10px);
+}
+
+/* Button Animation */
+/* ... */
