@@ -274,3 +274,118 @@ img{
 }
 
 }
+// =========================
+// Product Filter
+// =========================
+
+const search = document.getElementById("searchInput");
+
+if(search){
+
+search.addEventListener("input",()=>{
+
+const value = search.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+const name = card.querySelector("h3").textContent.toLowerCase();
+
+card.style.display = name.includes(value) ? "block" : "none";
+
+});
+
+});
+
+}
+
+// =========================
+// Toast Notification
+// =========================
+
+const toast = document.createElement("div");
+
+toast.id = "toast";
+
+toast.innerHTML = "✅ Product Added To Cart";
+
+document.body.appendChild(toast);
+
+toast.style.cssText = `
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+background:#2563eb;
+color:#fff;
+padding:15px 25px;
+border-radius:12px;
+font-weight:bold;
+display:none;
+z-index:9999;
+`;
+
+document.querySelectorAll(".buy-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+toast.style.display="block";
+
+setTimeout(()=>{
+toast.style.display="none";
+},2000);
+
+});
+
+});
+
+// =========================
+// Save Cart Count
+// =========================
+
+let cartCount = Number(localStorage.getItem("cartCount")) || 0;
+
+const cartBadge = document.getElementById("cartCount");
+
+if(cartBadge){
+cartBadge.textContent = cartCount;
+}
+
+document.querySelectorAll(".buy-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+cartCount++;
+
+localStorage.setItem("cartCount",cartCount);
+
+if(cartBadge){
+cartBadge.textContent = cartCount;
+}
+
+});
+
+});
+
+// =========================
+// Image Zoom
+// =========================
+
+document.querySelectorAll(".card img").forEach(img=>{
+
+img.addEventListener("mouseenter",()=>{
+
+img.style.transform="scale(1.08)";
+
+});
+
+img.addEventListener("mouseleave",()=>{
+
+img.style.transform="scale(1)";
+
+});
+
+});
+
+// =========================
+
+console.log("🚀 Zera Shop Professional Version Loaded");
