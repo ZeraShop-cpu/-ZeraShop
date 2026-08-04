@@ -389,3 +389,160 @@ img.style.transform="scale(1)";
 // =========================
 
 console.log("🚀 Zera Shop Professional Version Loaded");
+// ===========================
+// Newsletter Form
+// ===========================
+
+const form = document.querySelector(".newsletter-form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const email = form.querySelector("input");
+
+if(email.value.trim()===""){
+
+alert("Please enter your email.");
+
+return;
+
+}
+
+alert("Thanks for subscribing!");
+
+email.value="";
+
+});
+
+}
+
+// ===========================
+// Smooth Scroll
+// ===========================
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+// ===========================
+// Active Navigation
+// ===========================
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-120;
+
+const height=section.offsetHeight;
+
+if(pageYOffset>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+// ===========================
+// Reveal Animation
+// ===========================
+
+const reveals=document.querySelectorAll(".card,.item,.feature-box div");
+
+function reveal(){
+
+const windowHeight=window.innerHeight;
+
+reveals.forEach(el=>{
+
+const top=el.getBoundingClientRect().top;
+
+if(top<windowHeight-100){
+
+el.style.opacity="1";
+el.style.transform="translateY(0)";
+
+}
+
+});
+
+}
+
+reveals.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(40px)";
+el.style.transition=".6s";
+
+});
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+// ===========================
+// Header Shadow
+// ===========================
+
+const header=document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>30){
+
+header.style.boxShadow="0 10px 25px rgba(0,0,0,.15)";
+
+}else{
+
+header.style.boxShadow="0 8px 20px rgba(0,0,0,.08)";
+
+}
+
+});
+
+// ===========================
+// Welcome
+// ===========================
+
+console.log("Welcome To Zera Shop 🚀");
