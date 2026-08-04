@@ -160,3 +160,117 @@ topBtn.style.bottom = "25px";
 topBtn.style.right = "25px";
 topBtn.style.width = "50px";
 topBtn.style.height = "
+/* ===========================
+   Animations
+=========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+
+img{
+    transition:.4s;
+}
+
+.card:hover img,
+.item:hover img{
+    transform:scale(1.08);
+}
+
+/* ===========================
+   Back To Top
+=========================== */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+#topBtn:hover{
+    background:#1d4ed8;
+    transform:scale(1.1);
+}
+
+/* ===========================
+   Loader
+=========================== */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:.5s;
+}
+
+.loader.hidden{
+    opacity:0;
+    visibility:hidden;
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    border:6px solid #ddd;
+    border-top:6px solid #2563eb;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+#topBtn{
+    width:48px;
+    height:48px;
+    font-size:20px;
+    bottom:20px;
+    right:20px;
+}
+
+}
