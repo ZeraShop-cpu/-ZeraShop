@@ -1,258 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Zera Shop | Premium Online Store</title>
 
-    <meta name="description" content="Zera Shop - Premium Online Shopping Experience">
+    <meta name="description" content="Premium Shopping Experience">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
+<div class="logo">
 
-        <img src="images/logo.PNG" alt="Zera Shop Logo">
+<img src="images/logo.PNG" alt="logo">
 
-        <h2>Zera Shop</h2>
+<h2>Zera Shop</h2>
 
-    </div>
+</div>
+
 <i class="fa-solid fa-bars" id="menuBtn"></i>
-    <nav>
 
-        <a href="index.html">Home</a>
+<nav>
 
-        <a href="products.html">Products</a>
+<a href="#">Home</a>
 
-        <a href="about.html">About</a>
+<a href="#">Products</a>
 
-        <a href="contact.html">Contact</a>
+<a href="#">About</a>
 
-    </nav>
+<a href="#">Contact</a>
 
-    <div class="right">
+</nav>
 
-        <div class="search">
+<div class="right">
 
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search products...">
+<div class="search">
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+<input type="text" placeholder="Search Products...">
 
-        </div>
+<i class="fa-solid fa-magnifying-glass"></i>
 
-        <button id="themeBtn">🌙</button>
+</div>
 
-        <a href="login.html">
+<button id="themeBtn">🌙</button>
 
-            <i class="fa-regular fa-user"></i>
+<a href="#"><i class="fa-regular fa-user"></i></a>
 
-        </a>
+<a href="#"><i class="fa-regular fa-heart"></i></a>
 
-        <a href="wishlist.html">
+<a href="#" class="cart-icon">
 
-            <i class="fa-regular fa-heart"></i>
+<i class="fa-solid fa-cart-shopping"></i>
 
-        </a>
+<span id="cartCount">0</span>
 
-        <a href="cart.html" class="cart-icon">
+</a>
 
-            <i class="fa-solid fa-cart-shopping"></i>
-
-            <span id="cartCount">0</span>
-
-        </a>
-
-    </div>
+</div>
 
 </header>
 
 <section class="hero">
 
-    <div class="left">
+<div class="left">
 
-        <span>🔥 NEW COLLECTION 2026</span>
+<span>🔥 NEW COLLECTION 2026</span>
 
-        <h1>
+<h1>
+Premium Shopping
+Experience
+</h1>
 
-            Premium Shopping
+<p>
 
-            Experience
+Discover thousands of premium products
+with high quality,
+fast delivery,
+secure payment
+and modern shopping experience.
 
-        </h1>
+</p>
 
-        <p>
+<a href="#products">
 
-            Discover thousands of premium products with
-            high quality, fast delivery and secure payment.
+<button>Shop Now</button>
 
-        </p>
+</a>
 
-        <a href="products.html">
+</div>
 
-            <button>
+<div class="right-image">
 
-                Shop Now
+<img src="images/banner.PNG" alt="Banner">
 
-            </button>
-
-        </a>
-
-    </div>
-
-    <div class="right-image">
-
-        <img
-            src="images/banner.PNG"
-            alt="Hero Banner">
-
-    </div>
+</div>
 
 </section>
+
 <section class="categories">
 
-    <h2>Shop By Category</h2>
+<h2>Shop By Category</h2>
 
-    <div class="category-box">
+<div class="category-box">
 
-        <div class="item">
+<div class="item">
 
-            <img src="images/product1.PNG" alt="Electronics">
+<img src="images/product1.PNG">
 
-            <h3>Electronics</h3>
+<h3>Electronics</h3>
 
-            <p>Latest gadgets & devices</p>
+<p>Latest Technology</p>
 
-        </div>
+</div>
 
-        <div class="item">
+<div class="item">
 
-            <img src="images/product2.PNG" alt="Fashion">
+<img src="images/product2.PNG">
 
-            <h3>Fashion</h3>
+<h3>Fashion</h3>
 
-            <p>Trending clothes</p>
+<p>Modern Style</p>
 
-        </div>
+</div>
 
-        <div class="item">
+<div class="item">
 
-            <img src="images/product3.PNG" alt="Accessories">
+<img src="images/product3.PNG">
 
-            <h3>Accessories</h3>
+<h3>Accessories</h3>
 
-            <p>Premium accessories</p>
+<p>Premium Quality</p>
 
-        </div>
+</div>
 
-        <div class="item">
+<div class="item">
 
-            <img src="images/product4.PNG" alt="Gaming">
+<img src="images/product4.PNG">
 
-            <h3>Gaming</h3>
+<h3>Gaming</h3>
 
-            <p>Gaming gear</p>
+<p>Best Gaming Gear</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
-
-<section class="featured">
+<section class="featured" id="products">
 
     <h2>Featured Products</h2>
 
     <div class="products">
 
         <div class="card">
-
             <img src="images/product1.PNG" alt="Wireless Headphones">
 
             <div class="card-content">
-
                 <h3>Wireless Headphones</h3>
 
-                <div class="stars">★★★★★</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
                 <p class="price">$59</p>
 
                 <button class="buy-btn">Add To Cart</button>
-
             </div>
-
         </div>
 
         <div class="card">
-
             <img src="images/product2.PNG" alt="Smart Watch">
 
             <div class="card-content">
-
                 <h3>Smart Watch</h3>
 
-                <div class="stars">★★★★★</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
                 <p class="price">$89</p>
 
                 <button class="buy-btn">Add To Cart</button>
-
             </div>
-
         </div>
 
         <div class="card">
-
             <img src="images/product3.PNG" alt="Travel Bag">
 
             <div class="card-content">
-
                 <h3>Travel Bag</h3>
 
-                <div class="stars">★★★★★</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
                 <p class="price">$39</p>
 
                 <button class="buy-btn">Add To Cart</button>
-
             </div>
-
         </div>
 
         <div class="card">
-
             <img src="images/product4.PNG" alt="Gaming Mouse">
 
             <div class="card-content">
-
                 <h3>Gaming Mouse</h3>
 
-                <div class="stars">★★★★★</div>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
 
                 <p class="price">$29</p>
 
                 <button class="buy-btn">Add To Cart</button>
-
             </div>
-
         </div>
 
     </div>
@@ -263,15 +252,14 @@
 
     <h2>🔥 Summer Sale</h2>
 
-    <p>Up to 50% OFF on selected products.</p>
+    <p>Up To 50% OFF On Premium Products</p>
 
-    <a href="products.html">
-
+    <a href="#">
         <button>Shop Deals</button>
-
     </a>
 
 </section>
+
 <section class="features">
 
     <h2>Why Choose Zera Shop?</h2>
@@ -281,25 +269,25 @@
         <div>
             <i class="fa-solid fa-truck-fast"></i>
             <h3>Fast Delivery</h3>
-            <p>Fast shipping worldwide.</p>
+            <p>Worldwide Shipping</p>
         </div>
 
         <div>
             <i class="fa-solid fa-shield-halved"></i>
             <h3>Secure Payment</h3>
-            <p>100% secure payment system.</p>
+            <p>100% Safe Checkout</p>
         </div>
 
         <div>
             <i class="fa-solid fa-gem"></i>
             <h3>Premium Quality</h3>
-            <p>Top quality products.</p>
+            <p>Top Rated Products</p>
         </div>
 
         <div>
             <i class="fa-solid fa-headset"></i>
             <h3>24/7 Support</h3>
-            <p>Always here to help you.</p>
+            <p>Always Ready To Help</p>
         </div>
 
     </div>
@@ -308,15 +296,13 @@
 
 <section class="newsletter">
 
-    <h2>Subscribe to our Newsletter</h2>
+    <h2>Subscribe To Our Newsletter</h2>
 
-    <p>Get the latest offers and new arrivals.</p>
+    <p>Receive New Products & Special Offers</p>
 
     <form class="newsletter-form">
 
-        <input
-            type="email"
-            placeholder="Enter your email">
+        <input type="email" placeholder="Enter Your Email">
 
         <button type="submit">Subscribe</button>
 
@@ -333,8 +319,8 @@
             <h3>Zera Shop</h3>
 
             <p>
-                Premium online shopping experience with
-                quality products and fast delivery.
+                Premium Online Shopping Experience
+                With High Quality Products.
             </p>
 
             <div class="social">
@@ -355,13 +341,10 @@
 
             <h3>Quick Links</h3>
 
-            <a href="index.html">Home</a>
-
-            <a href="products.html">Products</a>
-
-            <a href="about.html">About</a>
-
-            <a href="contact.html">Contact</a>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
 
         </div>
 
@@ -370,12 +353,9 @@
             <h3>Customer Service</h3>
 
             <a href="#">Help Center</a>
-
             <a href="#">Privacy Policy</a>
-
-            <a href="#">Terms & Conditions</a>
-
             <a href="#">Shipping</a>
+            <a href="#">Terms & Conditions</a>
 
         </div>
 
@@ -383,10 +363,8 @@
 
             <h3>Contact</h3>
 
-            <p>📧 <a href="mailto:info@zerashop.com">info@zerashop.com</a></p>
-
-            <p>📞 <a href="tel:+9647500000000">+964 750 000 0000</a></p>
-
+            <p>📧 info@zerashop.com</p>
+            <p>📞 +964 750 000 0000</p>
             <p>📍 Kurdistan, Iraq</p>
 
         </div>
@@ -394,9 +372,7 @@
     </div>
 
     <div class="copy">
-
         © 2026 Zera Shop. All Rights Reserved.
-
     </div>
 
 </footer>
