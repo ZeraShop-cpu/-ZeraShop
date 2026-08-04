@@ -1,44 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZeraShop</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zera Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">🛍️ ZeraShop</div>
+<header>
 
-  <input
-    type="text"
-    id="search"
-    placeholder="Search products..."
-    onkeyup="searchProducts()">
+    <div class="logo">
+        <img src="images/logo.png" alt="">
+        <h2>Zera Shop</h2>
+    </div>
 
-  <div class="cart">
-    🛒 Cart
-    <span id="cart-count">0</span>
-  </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="#">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="icons">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <a href="login.html">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+    </div>
+
 </header>
 
-<nav class="categories">
-  <button>All</button>
-  <button>Men</button>
-  <button>Women</button>
-  <button>Kids</button>
-</nav>
 
-<main>
-  <div id="products" class="products"></div>
-</main>
+<section class="hero">
 
-<footer>
-  <h3>ZeraShop</h3>
-  <p>Quality Clothes at Best Prices</p>
-  <p>© 2026 ZeraShop. All Rights Reserved.</p>
-</footer>
+    <div class="hero-text">
+
+        <span>New Collection</span>
+
+        <h1>Discover The Best Products</h1>
+
+        <p>
+            Shop the newest products with the best quality and price.
+        </p>
+
+        <button>Shop Now</button>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/banner.png" alt="">
+
+    </div>
+
+</section>
+
+
+<section class="products">
+
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+
+<img src="images/product1.jpg">
+
+<h3>Wireless Headphones</h3>
+
+<p>$59.99</p>
+
+<button>Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/product2.jpg">
+
+<h3>Smart Watch</h3>
+
+<p>$89.99</p>
+
+<button>Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/product3.jpg">
+
+<h3>Backpack</h3>
+
+<p>$39.99</p>
+
+<button>Buy Now</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/product4.jpg">
+
+<h3>Camera</h3>
+
+<p>$199.99</p>
+
+<button>Buy Now</button>
+
+</div>
+
+</div>
+
+</section>
 
 <script src="script.js"></script>
 
