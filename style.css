@@ -536,3 +536,49 @@ footer{
     font-size:12px;
     font-weight:bold;
 }
+@media (max-width:768px){
+
+header{
+    padding:15px;
+    gap:10px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+.logo img{
+    width:45px;
+}
+
+.search{
+    display:none;
+}
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.left h1{
+    font-size:42px;
+}
+
+.right-image img{
+    width:100%;
+    max-width:350px;
+}
+
+.category-box{
+    grid-template-columns:1fr;
+}
+
+.products{
+    grid-template-columns:1fr;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+}
+}
