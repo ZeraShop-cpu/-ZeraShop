@@ -770,3 +770,45 @@ header{
 }
 
 }
+/* ===== Mobile Hero Fix ===== */
+@media (max-width:768px){
+
+.hero{
+    padding:20px;
+}
+
+.hero-content{
+    padding:30px 20px;
+    border-radius:30px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.hero button{
+    width:220px;
+    height:60px;
+    font-size:22px;
+    border-radius:16px;
+}
+
+.hero img{
+    width:100%;
+    max-width:100%;
+    margin-top:30px;
+    border-radius:20px;
+}
+
+.categories{
+    padding-top:40px;
+}
+
+}
