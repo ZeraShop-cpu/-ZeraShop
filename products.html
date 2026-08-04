@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Zera Shop</title>
 
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.page-title{
+text-align:center;
+padding:40px 0 20px;
+font-size:40px;
+}
+
+.product-grid{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+padding-bottom:50px;
+}
+
+.card{
+background:#fff;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:180px;
+height:180px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.price{
+color:#2563eb;
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.rating{
+color:#ffc107;
+margin-bottom:15px;
+}
+
+.card button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:#fff;
+font-size:16px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#1d4ed8;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/logo.png">
+<h2>Zera Shop</h2>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="icons">
+<a href="login.html"><i class="fa-regular fa-user"></i></a>
+<a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+</div>
+
+</header>
+
+<h1 class="page-title">Featured Products</h1>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="images/product1.jpg">
+<h3>Wireless Headphones</h3>
+<div class="price">$59.99</div>
+<div class="rating">★★★★★</div>
+<button>Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="images/product2.jpg">
+<h3>Smart Watch</h3>
+<div class="price">$89.99</div>
+<div class="rating">★★★★★</div>
+<button>Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="images/product3.jpg">
+<h3>Travel Backpack</h3>
+<div class="price">$39.99</div>
+<div class="rating">★★★★★</div>
+<button>Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="images/product4.jpg">
+<h3>Digital Camera</h3>
+<div class="price">$199.99</div>
+<div class="rating">★★★★★</div>
+<button>Add To Cart</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
