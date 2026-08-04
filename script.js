@@ -41,3 +41,21 @@ if (slider) {
         slider.src = banners[current];
     }, 3000);
 }
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+        const value = this.value.toLowerCase();
+        const products = document.querySelectorAll(".product-card");
+
+        products.forEach(product => {
+            const text = product.innerText.toLowerCase();
+
+            if (text.includes(value)) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    });
+}
