@@ -706,3 +706,15 @@ to{
 }
 
 }
+nav.show{
+    display:flex;
+    position:absolute;
+    top:85px;
+    left:0;
+    width:100%;
+    background:#fff;
+    flex-direction:column;
+    padding:20px;
+    gap:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
