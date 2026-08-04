@@ -23,3 +23,21 @@ if (themeBtn) {
         }
     });
 }
+const slider = document.getElementById("slider");
+
+if (slider) {
+    const banners = [
+        "images/banner.PNG",
+        "images/product5.PNG",
+        "images/product6.PNG",
+        "images/product7.PNG",
+        "images/product8.PNG"
+    ];
+
+    let current = 0;
+
+    setInterval(() => {
+        current = (current + 1) % banners.length;
+        slider.src = banners[current];
+    }, 3000);
+}
