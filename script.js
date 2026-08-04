@@ -546,3 +546,59 @@ header.style.boxShadow="0 8px 20px rgba(0,0,0,.08)";
 // ===========================
 
 console.log("Welcome To Zera Shop 🚀");
+// ==========================
+// Save Dark Mode
+// ==========================
+
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark");
+    themeBtn.textContent = "☀️";
+}
+
+themeBtn.addEventListener("click", () => {
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme","dark");
+    }else{
+        localStorage.setItem("theme","light");
+    }
+});
+
+// ==========================
+// Smooth Page Load
+// ==========================
+
+window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
+});
+
+document.body.style.opacity = "0";
+document.body.style.transition = "opacity .5s";
+
+// ==========================
+// Back To Top
+// ==========================
+
+const topBtn = document.createElement("button");
+topBtn.id = "topBtn";
+topBtn.innerHTML = "↑";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+        topBtn.style.display = "block";
+    }else{
+        topBtn.style.display = "none";
+    }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
