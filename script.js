@@ -1,189 +1,162 @@
-// =========================
-// Zera Shop Script
-// =========================
+// ===============================
+// Zera Shop JavaScript
+// ===============================
 
 // ---------- Dark Mode ----------
+
 const themeBtn = document.getElementById("themeBtn");
 
-if (localStorage.getItem("theme") === "dark") {
+if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark");
-    if (themeBtn) themeBtn.innerHTML = "☀️";
+    themeBtn.textContent = "☀️";
 }
 
-if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
+themeBtn.addEventListener("click",()=>{
 
-        if (document.body.classList.contains("dark")) {
-            localStorage.setItem("theme", "dark");
-            themeBtn.innerHTML = "☀️";
-        } else {
-            localStorage.setItem("theme", "light");
-            themeBtn.innerHTML = "🌙";
-        }
-    });
-}
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme","dark");
+        themeBtn.textContent="☀️";
+    }else{
+        localStorage.setItem("theme","light");
+        themeBtn.textContent="🌙";
+    }
+
+});
 
 // ---------- Search ----------
+
 const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup",()=>{
+
+const value = searchInput.value.toLowerCase();
+
 const cards = document.querySelectorAll(".card");
 
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
+cards.forEach(card=>{
 
-        let value = this.value.toLowerCase();
+const title = card.querySelector("h3").textContent.toLowerCase();
 
-        cards.forEach(card => {
-
-            let title = card.querySelector("h3").textContent.toLowerCase();
-
-            if (title.includes(value)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-    });
+if(title.includes(value)){
+card.style.display="block";
+}else{
+card.style.display="none";
 }
 
-// ---------- Cart ----------
+});
+
+});
+
+}
+
+// ---------- Add To Cart ----------
+
 let cart = Number(localStorage.getItem("cart")) || 0;
 
 const cartCount = document.getElementById("cartCount");
 
-function updateCart() {
-    if (cartCount) {
-        cartCount.textContent = cart;
-    }
+if(cartCount){
+cartCount.textContent = cart;
 }
 
-updateCart();
+const buttons = document.querySelectorAll(".buy-btn");
 
-document.querySelectorAll(".buy-btn").forEach(btn => {
+buttons.forEach(btn=>{
 
-    btn.addEventListener("click", () => {
+btn.addEventListener("click",()=>{
 
-        cart++;
+cart++;
 
-        localStorage.setItem("cart", cart);
+localStorage.setItem("cart",cart);
 
-        updateCart();
+if(cartCount){
+cartCount.textContent = cart;
+}
 
-        btn.innerHTML = "✔ Added";
+btn.textContent="Added ✓";
 
-        btn.disabled = true;
-
-        setTimeout(() => {
-
-            btn.innerHTML = "Add To Cart";
-
-            btn.disabled = false;
-
-        }, 1500);
-
-    });
+setTimeout(()=>{
+btn.textContent="Add To Cart";
+},1200);
 
 });
 
-// ---------- Slider ----------
-const slider = document.querySelector(".slider img");
-
-if (slider) {
-
-    const images = [
-
-        "images/banner.PNG",
-        "images/product1.PNG",
-        "images/product2.PNG",
-        "images/product3.PNG",
-        "images/product4.PNG"
-
-    ];
-
-    let current = 0;
-
-    setInterval(() => {
-
-        current++;
-
-        if (current >= images.length) current = 0;
-
-        slider.src = images[current];
-
-    }, 3000);
-
-}
-
+});
 // ---------- Newsletter ----------
+
 const newsletterBtn = document.querySelector(".newsletter button");
 
-if (newsletterBtn) {
+if(newsletterBtn){
 
-    newsletterBtn.addEventListener("click", () => {
+newsletterBtn.addEventListener("click",()=>{
 
-        const email = document.querySelector(".newsletter input").value;
+const email = document.querySelector(".newsletter input");
 
-        if (email === "") {
+if(email.value.trim()===""){
 
-            alert("Please enter your email.");
+alert("Please enter your email.");
 
-            return;
+}else{
 
-        }
+alert("Thank you for subscribing!");
 
-        alert("Thank you for subscribing!");
-
-        document.querySelector(".newsletter input").value = "";
-
-    });
+email.value="";
 
 }
 
-// ---------- Smooth Scroll ----------
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-
-            target.scrollIntoView({
-
-                behavior: "smooth"
-
-            });
-
-        }
-
-    });
-
 });
 
-// ---------- Button Hover ----------
-document.querySelectorAll("button").forEach(button => {
+}
 
-    button.addEventListener("mouseenter", () => {
+// ---------- Hero Slider ----------
 
-        button.style.transform = "scale(1.05)";
+const sliderImages = [
 
-    });
+"images/banner.PNG",
+"images/slider1.PNG",
+"images/slider2.PNG",
+"images/slider3.PNG"
 
-    button.addEventListener("mouseleave", () => {
+];
 
-        button.style.transform = "scale(1)";
+const heroImage = document.querySelector(".right-image img");
 
-    });
+let currentSlide = 0;
 
-});
+if(heroImage){
 
-// ---------- Welcome ----------
-window.addEventListener("load", () => {
+setInterval(()=>{
 
-    console.log("Welcome to Zera Shop");
+currentSlide++;
 
-});
+if(currentSlide >= sliderImages.length){
+
+currentSlide = 0;
+
+}
+
+heroImage.src = sliderImages[currentSlide];
+
+},3000);
+
+}
+
+// ---------- Scroll To Top ----------
+
+const topBtn = document.createElement("button");
+
+topBtn.innerHTML = "↑";
+
+topBtn.id = "topBtn";
+
+document.body.appendChild(topBtn);
+
+topBtn.style.position = "fixed";
+topBtn.style.bottom = "25px";
+topBtn.style.right = "25px";
+topBtn.style.width = "50px";
+topBtn.style.height = "
