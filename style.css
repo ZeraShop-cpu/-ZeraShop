@@ -483,7 +483,28 @@ footer{
     gap:20px;
     border-top:1px solid rgba(255,255,255,.1);
 }
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+}
 
+.logo{
+    flex:1;
+}
+
+.menu-toggle{
+    display:block;
+    margin:0 15px;
+    font-size:30px;
+}
+
+.icons{
+    display:flex;
+    gap:18px;
+    margin-left:auto;
+}
 .menu.active{
     display:flex;
 }
