@@ -739,3 +739,25 @@ color:#000;
 #wishlist-btn.active{
     color:#ff2d55;
 }
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+@media (max-width:900px){
+
+.menu-toggle{
+    display:block;
+}
+
+.menu{
+    display:none;
+}
+
+.icons{
+    margin-left:auto;
+}
+
+}
