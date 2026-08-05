@@ -1,109 +1,13 @@
-// Smooth Reveal Animation
-
-const items = document.querySelectorAll(
-".category-card,.card,.feature-card,.sale-banner,.newsletter"
-);
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
-
-}
-
-});
-
-},{threshold:.2});
-
-items.forEach(item=>{
-
-item.style.opacity="0";
-item.style.transform="translateY(60px)";
-item.style.transition=".8s";
-
-observer.observe(item);
-
-});
-
-// Button Effect
-
-document.querySelectorAll("button").forEach(btn=>{
-
-btn.addEventListener("click",()=>{
-
-btn.innerHTML="✔ Added";
-
-setTimeout(()=>{
-
-btn.innerHTML="Buy Now";
-
-},1500);
-
-});
-
-});
-
-// Navbar Shadow
-
-window.addEventListener("scroll",()=>{
-
-const nav=document.querySelector(".navbar");
-
-if(window.scrollY>50){
-
-nav.style.boxShadow="0 15px 40px rgba(0,0,0,.35)";
-
-}else{
-
-nav.style.boxShadow="none";
-
-}
-
-});
-let cart = 0;
-
-document.querySelectorAll(".card button").forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-cart++;
-
-document.getElementById("cart-count").innerText = cart;
-
-});
-
-});
-let cart = 0;
-
 const cartCount = document.getElementById("cart-count");
+const buttons = document.querySelectorAll(".card button");
 
-document.querySelectorAll(".card button").forEach(button => {
+let count = 0;
 
+buttons.forEach(button => {
     button.addEventListener("click", () => {
+        count++;
+        cartCount.textContent = count;
 
-        cart++;
-
-        cartCount.textContent = cart;
-
+        alert("Product added to cart ✅");
     });
-
-});
-const wishlistBtn = document.getElementById("wishlist-btn");
-
-wishlistBtn.addEventListener("click", () => {
-
-    wishlistBtn.classList.toggle("active");
-
-    if(wishlistBtn.classList.contains("active")){
-        wishlistBtn.classList.remove("fa-regular");
-        wishlistBtn.classList.add("fa-solid");
-    }else{
-        wishlistBtn.classList.remove("fa-solid");
-        wishlistBtn.classList.add("fa-regular");
-    }
-
 });
