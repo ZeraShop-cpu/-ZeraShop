@@ -504,7 +504,13 @@ footer{
     flex-wrap:wrap;
     justify-content:center;
 }
+.menu{
+    gap:15px;
+}
 
+.menu a{
+    font-size:15px;
+}
 .hero-text h1{
     font-size:46px;
 }
