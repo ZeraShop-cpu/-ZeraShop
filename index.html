@@ -1,284 +1,477 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ================= HEADER ================= -->
 
-    <title>ZeraShop</title>
+<header class="header">
 
-    <link rel="stylesheet" href="style.css">
+    <nav class="navbar">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <a href="#" class="logo">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+            <img src="images/logo.PNG" alt="ZeraShop">
 
-<body>
+            <span>ZeraShop</span>
 
-<header>
+        </a>
 
-<nav class="navbar">
+        <ul class="nav-links">
 
-<div class="logo">
-    <h2>ZeraShop</h2>
-</div>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Contact</a></li>
 
-<div class="menu-toggle">
-    ☰
-</div>
+        </ul>
 
-<ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Shop</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#">New Arrivals</a></li>
-    <li><a href="#">Best Sellers</a></li>
-    <li><a href="#">Contact</a></li>
-</ul>
+        <div class="search-box">
 
-<div class="icons">
+            <input type="text" placeholder="Search products...">
 
-    <a href="search.html">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-    <a href="wishlist.html">
-        <i class="fa-regular fa-heart" id="wishlist-btn"></i>
-    </a>
+        </div>
 
-    <a href="cart.html">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span id="cart-count">0</span>
-    </a>
+        <div class="nav-icons">
 
-    <a href="login.html">
-        <i class="fa-regular fa-user"></i>
-    </a>
+            <a href="#">
+                <i class="fa-regular fa-heart"></i>
+            </a>
 
-</div>
+            <a href="#">
+                <i class="fa-regular fa-user"></i>
+            </a>
 
-</nav>
+            <a href="#" class="cart-icon">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>0</span>
+
+            </a>
+
+        </div>
+
+        <div class="menu-toggle">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </nav>
 
 </header>
-
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="hero-text">
+    <div class="hero-content">
 
-<span>WELCOME TO ZERASHOP</span>
+        <span class="hero-subtitle">
+            WELCOME TO ZERASHOP
+        </span>
 
-<h1>
-Premium Quality.<br>
-Luxury Experience.
-</h1>
+        <h1>
+            Premium Quality.<br>
+            <span>Luxury</span> Experience.
+        </h1>
 
-<p>
-Discover premium products with a luxury shopping experience.
-Fashion, Electronics, Shoes and Accessories — all in one place.
-</p>
+        <p>
+            Discover our exclusive collection of premium
+            products and elevate your lifestyle.
+        </p>
 
-<div class="hero-buttons">
-<a href="#" class="btn1">Shop Now</a>
-<a href="#" class="btn2">Explore Collection</a>
-</div>
+        <div class="hero-buttons">
 
-</div>
+            <a href="#" class="btn-primary">
+                SHOP NOW
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
-<div class="hero-image">
+            <a href="#" class="btn-secondary">
+                EXPLORE COLLECTION
+            </a>
 
-<img src="images/hero.PNG" alt="Hero Image">
+        </div>
 
-</div>
+        <div class="customers">
+
+            <div class="avatars">
+
+                <img src="images/user1.png" alt="">
+                <img src="images/user2.png" alt="">
+                <img src="images/user3.png" alt="">
+                <img src="images/user4.png" alt="">
+
+            </div>
+
+            <div class="customers-text">
+
+                <h3>50K+</h3>
+                <p>Happy Customers</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/hero.PNG" alt="Hero">
+
+    </div>
 
 </section>
-<!-- CATEGORIES -->
+<!-- ================= FEATURES BAR ================= -->
+
+<section class="features-bar">
+
+    <div class="feature-item">
+
+        <i class="fa-solid fa-truck-fast"></i>
+
+        <div>
+            <h3>Free Shipping</h3>
+            <p>On all orders over $99</p>
+        </div>
+
+    </div>
+
+    <div class="feature-item">
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        <div>
+            <h3>Secure Payment</h3>
+            <p>100% Protected Checkout</p>
+        </div>
+
+    </div>
+
+    <div class="feature-item">
+
+        <i class="fa-solid fa-rotate-left"></i>
+
+        <div>
+            <h3>Easy Returns</h3>
+            <p>30 Days Return Policy</p>
+        </div>
+
+    </div>
+
+    <div class="feature-item">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <div>
+            <h3>24/7 Support</h3>
+            <p>Always Here To Help</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= POPULAR CATEGORIES ================= -->
 
 <section class="categories">
 
-<h2 class="section-title">Shop By Category</h2>
+    <div class="section-header">
 
-<div class="category-grid">
+        <h2>Popular Categories</h2>
 
-<div class="category-card">
-<img src="images/banner.PNG" alt="Fashion">
-<h3>Fashion</h3>
-</div>
+        <a href="#">View All</a>
 
-<div class="category-card">
-<img src="images/product1.PNG" alt="Electronics">
-<h3>Electronics</h3>
-</div>
+    </div>
 
-<div class="category-card">
-<img src="images/product2.PNG" alt="Shoes">
-<h3>Shoes</h3>
-</div>
+    <div class="category-grid">
 
-<div class="category-card">
-<img src="images/product3.PNG" alt="Accessories">
-<h3>Accessories</h3>
-</div>
+        <div class="category-card">
+            <img src="images/category1.jpg" alt="Fashion">
+            <h3>Fashion</h3>
+        </div>
 
-</div>
+        <div class="category-card">
+            <img src="images/category2.jpg" alt="Shoes">
+            <h3>Shoes</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/category3.jpg" alt="Watches">
+            <h3>Watches</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/category4.jpg" alt="Accessories">
+            <h3>Accessories</h3>
+        </div>
+
+    </div>
 
 </section>
-
-<!-- PRODUCTS -->
+<!-- ================= FEATURED PRODUCTS ================= -->
 
 <section class="products">
 
-<h2 class="section-title">Featured Products</h2>
+    <div class="section-header">
 
-<div class="product-grid">
+        <h2>Featured Products</h2>
 
-<div class="card">
-<img src="images/product4.PNG" alt="Nike Air Max">
-<h3>Nike Air Max</h3>
-<p>$129</p>
-<button>Buy Now</button>
-</div>
+        <a href="#">View All</a>
 
-<div class="card">
-<img src="images/product7.PNG" alt="Premium T-Shirt">
-<h3>Premium T-Shirt</h3>
-<p>$49</p>
-<button>Buy Now</button>
-</div>
+    </div>
 
-<div class="card">
-<img src="images/product8.PNG" alt="Luxury Watch">
-<h3>Luxury Watch</h3>
-<p>$249</p>
-<button>Buy Now</button>
-</div>
+    <div class="product-grid">
 
-<div class="card">
-<img src="images/banner.PNG" alt="Leather Bag">
-<h3>Leather Bag</h3>
-<p>$199</p>
-<button>Buy Now</button>
-</div>
+        <!-- Product 1 -->
 
-</div>
+        <div class="product-card">
+
+            <span class="badge">NEW</span>
+
+            <button class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img src="images/product1.jpg" alt="Product">
+
+            <h3>Luxury Sneakers</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+                <span>(4.8)</span>
+            </div>
+
+            <div class="price">
+                <span>$129</span>
+                <del>$159</del>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+            <button class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img src="images/product2.jpg" alt="Product">
+
+            <h3>Premium T-Shirt</h3>
+
+            <div class="rating">
+                ★★★★★ <span>(5.0)</span>
+            </div>
+
+            <div class="price">
+                <span>$49</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+            <button class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img src="images/product3.jpg" alt="Product">
+
+            <h3>Luxury Watch</h3>
+
+            <div class="rating">
+                ★★★★★ <span>(4.9)</span>
+            </div>
+
+            <div class="price">
+                <span>$249</span>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="product-card">
+
+            <span class="badge sale">SALE</span>
+
+            <button class="wishlist">
+                <i class="fa-regular fa-heart"></i>
+            </button>
+
+            <img src="images/product4.jpg" alt="Product">
+
+            <h3>Leather Bag</h3>
+
+            <div class="rating">
+                ★★★★☆ <span>(4.6)</span>
+            </div>
+
+            <div class="price">
+                <span>$199</span>
+                <del>$239</del>
+            </div>
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
-<!-- FEATURES -->
-
-<section class="features">
-
-<h2 class="section-title">Why Choose ZeraShop?</h2>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-<i class="fa-solid fa-truck-fast"></i>
-<h3>Fast Delivery</h3>
-<p>Free and fast shipping worldwide.</p>
-</div>
-
-<div class="feature-card">
-<i class="fa-solid fa-shield-halved"></i>
-<h3>Secure Payment</h3>
-<p>100% secure online payment.</p>
-</div>
-
-<div class="feature-card">
-<i class="fa-solid fa-award"></i>
-<h3>Premium Quality</h3>
-<p>Only high quality products.</p>
-</div>
-
-<div class="feature-card">
-<i class="fa-solid fa-headset"></i>
-<h3>24/7 Support</h3>
-<p>We're here whenever you need us.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- SALE BANNER -->
-
-<section class="sale-banner">
-
-<div class="sale-content">
-
-<h2>Summer Sale</h2>
-
-<h3>Up To 50% OFF</h3>
-
-<p>
-Don't miss our biggest offers of the season.
-Luxury products at amazing prices.
-</p>
-
-<a href="#" class="btn1">Shop Sale</a>
-
-</div>
-
-</section>
-<!-- NEWSLETTER -->
+<!-- ================= NEWSLETTER ================= -->
 
 <section class="newsletter">
 
     <h2>Subscribe To Our Newsletter</h2>
 
     <p>
-        Get the latest products, discounts and exclusive offers.
+        Get exclusive offers, new arrivals and special discounts.
     </p>
 
     <form>
+
         <input type="email" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
     </form>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <div class="footer-logo">
-        <h2>ZeraShop</h2>
-        <p>Luxury Shopping Experience.</p>
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h2>ZeraShop</h2>
+
+            <p>
+                Premium online shopping with luxury experience.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Customer Service</h3>
+
+            <a href="#">FAQ</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="footer-links">
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">Categories</a>
-        <a href="#">Contact</a>
-    </div>
+    <hr>
 
-    <div class="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-x-twitter"></i>
-        <i class="fab fa-tiktok"></i>
-    </div>
-
-    <p class="copy">
+    <p class="copyright">
         © 2026 ZeraShop. All Rights Reserved.
     </p>
 
 </footer>
 
-<!-- SCRIPT -->
-
-<script src="script.js"></script>
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
 
-if (menuToggle && menu) {
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
-}
+menuToggle.onclick = () => {
+    navLinks.classList.toggle("active");
+};
+
+const wishlist = document.querySelectorAll(".wishlist");
+
+wishlist.forEach(btn => {
+
+    btn.onclick = () => {
+
+        btn.classList.toggle("active");
+
+        btn.innerHTML = btn.classList.contains("active")
+        ? '<i class="fa-solid fa-heart"></i>'
+        : '<i class="fa-regular fa-heart"></i>';
+
+    };
+
+});
+
+let cart = 0;
+
+document.querySelectorAll(".cart-btn").forEach(button => {
+
+    button.onclick = () => {
+
+        cart++;
+
+        document.querySelector(".cart-icon span").textContent = cart;
+
+    };
+
+});
 </script>
 
 </body>
