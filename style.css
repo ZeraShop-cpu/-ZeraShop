@@ -631,3 +631,25 @@ background:#f1cf58;
 background:#d4af37;
 color:#000;
 }
+.icons{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#cart-count{
+    position: absolute;
+    top: -8px;
+    right: 32px;
+    width: 20px;
+    height: 20px;
+    background: #ff3b30;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
