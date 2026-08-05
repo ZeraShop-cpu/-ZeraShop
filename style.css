@@ -1,197 +1,109 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeraShop</title>
 
-body{
-background:#0d0d0d;
-color:#fff;
-overflow-x:hidden;
-}
+<link rel="stylesheet" href="style.css">
 
-/* Navbar */
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.navbar{
-width:90%;
-margin:auto;
-height:90px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-.logo h2{
-font-size:32px;
-font-weight:700;
-color:#d4af37;
-}
+</head>
+<body>
 
-.menu{
-display:flex;
-gap:35px;
-list-style:none;
-}
+<header>
 
-.menu a{
-text-decoration:none;
-color:white;
-font-weight:500;
-transition:.3s;
-}
+<nav class="navbar">
 
-.menu a:hover{
-color:#d4af37;
-}
+<div class="logo">
+<h2>ZeraShop</h2>
+</div>
 
-.icons{
-display:flex;
-gap:22px;
-}
+<ul class="menu">
+<li><a href="#">Home</a></li>
+<li><a href="#">Shop</a></li>
+<li><a href="#">Categories</a></li>
+<li><a href="#">Best Sellers</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 
-.icons i{
-font-size:20px;
-cursor:pointer;
-transition:.3s;
-}
+<div class="icons">
+<i class="fa-solid fa-magnifying-glass"></i>
+<i class="fa-regular fa-heart"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-regular fa-user"></i>
+</div>
 
-.icons i:hover{
-color:#d4af37;
-transform:scale(1.2);
-}
+</nav>
 
-/* Hero */
+<section class="hero">
 
-.hero{
-width:90%;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-min-height:85vh;
-}
+<div class="hero-text">
 
-.hero-text{
-width:48%;
-animation:fadeUp 1s;
-}
+<h4>WELCOME TO ZERASHOP</h4>
 
-.hero-text h4{
-color:#d4af37;
-letter-spacing:4px;
-margin-bottom:15px;
-}
+<h1>Premium Quality.<br>Luxury Experience.</h1>
 
-.hero-text h1{
-font-size:65px;
-line-height:1.1;
-margin-bottom:25px;
-}
+<p>
+Discover premium products with a modern shopping experience.
+Everything you need in one luxury store.
+</p>
 
-.hero-text p{
-color:#c9c9c9;
-line-height:30px;
-margin-bottom:40px;
-}
+<div class="buttons">
+<a href="#" class="btn1">Shop Now</a>
+<a href="#" class="btn2">Explore</a>
+</div>
 
-.buttons{
-display:flex;
-gap:20px;
-}
+</div>
 
-.btn1{
-padding:15px 38px;
-background:#d4af37;
-color:black;
-text-decoration:none;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
-}
+<div class="hero-image">
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" alt="Hero">
+</div>
 
-.btn2{
-padding:15px 38px;
-border:2px solid #d4af37;
-color:#d4af37;
-text-decoration:none;
-border-radius:50px;
-transition:.3s;
-}
+</section>
 
-.btn1:hover{
-transform:translateY(-6px);
-}
+</header>
 
-.btn2:hover{
-background:#d4af37;
-color:black;
-}
+<section class="products">
 
-.hero-image{
-width:48%;
-display:flex;
-justify-content:center;
-}
+<h2 class="section-title">Featured Products</h2>
 
-.hero-image img{
-width:100%;
-max-width:600px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(212,175,55,.25);
-animation:float 4s ease-in-out infinite;
-}
+<div class="product-grid">
 
-@keyframes float{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-18px);
-}
-}
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="">
+<h3>Nike Shoes</h3>
+<p>$129</p>
+<button>Buy Now</button>
+</div>
 
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600" alt="">
+<h3>Premium T-Shirt</h3>
+<p>$49</p>
+<button>Buy Now</button>
+</div>
 
-/* Mobile */
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="">
+<h3>Luxury Watch</h3>
+<p>$249</p>
+<button>Buy Now</button>
+</div>
 
-@media(max-width:900px){
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600" alt="">
+<h3>Leather Bag</h3>
+<p>$199</p>
+<button>Buy Now</button>
+</div>
 
-.hero{
-flex-direction:column;
-text-align:center;
-padding-top:40px;
-}
+</div>
 
-.hero-text,
-.hero-image{
-width:100%;
-}
+</section>
 
-.hero-text h1{
-font-size:42px;
-}
-
-.menu{
-display:none;
-}
-
-.buttons{
-justify-content:center;
-margin-bottom:30px;
-}
-
-.hero-image img{
-max-width:90%;
-}
-
-}
+</body>
+</html>
