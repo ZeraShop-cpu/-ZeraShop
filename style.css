@@ -603,3 +603,89 @@ footer{
 
 border-top:1px solid #eee;
 }
+/* ==========================
+ HERO BACKGROUND
+========================== */
+
+.hero{
+    min-height:700px;
+    background:linear-gradient(135deg,#a546f9,#262b7c);
+    border-radius:0 0 30px 30px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-250px;
+    top:-180px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    right:-120px;
+    top:-40px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 300px;
+    align-items:center;
+    gap:40px;
+    padding:70px 60px;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:420px;
+    max-width:100%;
+}
+
+.hero-right{
+    color:#fff;
+}
+
+.review-card{
+    background:#fff;
+    color:#222;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.review-card img{
+    width:70px;
+    height:70px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+.stats{
+    margin-top:40px;
+}
+
+.stats h2{
+    font-size:58px;
+    margin-bottom:5px;
+}
+
+.stats p{
+    margin-bottom:25px;
+    opacity:.85;
+}
