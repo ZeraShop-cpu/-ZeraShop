@@ -470,25 +470,53 @@ footer{
 /* =========================
    RESPONSIVE
 ========================= */
-.navbar{
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
+@media (max-width:768px){
+
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .menu{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        margin-top:20px;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .icons{
+        margin-left:auto;
+    }
 }
 
-.logo{
-    margin-bottom: 15px;
-}
 
-.menu{
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.icons{
-    margin-top: 15px;
-}
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
 
     
 
