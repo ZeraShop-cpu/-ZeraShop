@@ -862,7 +862,27 @@ color:#000;
 }
 
 @media (max-width:768px){
+.menu.active{
+    display:flex;
+.menu{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    text-align:center;
+    margin-top:20px;
+}
 
+.menu.active{
+    display:flex;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.menu-toggle{
+    margin-right:15px;
+}
     .menu-toggle{
         display:block;
     }
