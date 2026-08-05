@@ -107,3 +107,66 @@ Everything you need in one luxury store.
 
 </body>
 </html>
+.products{
+    width:90%;
+    margin:80px auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#d4af37;
+    margin-bottom:40px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#181818;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    transition:.4s;
+    padding-bottom:25px;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(212,175,55,.25);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:20px;
+    font-size:22px;
+}
+
+.card p{
+    color:#d4af37;
+    margin:12px 0;
+    font-size:20px;
+}
+
+.card button{
+    padding:12px 30px;
+    border:none;
+    border-radius:40px;
+    background:#d4af37;
+    color:#000;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.card button:hover{
+    transform:scale(1.08);
+}
