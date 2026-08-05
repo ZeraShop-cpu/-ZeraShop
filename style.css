@@ -674,7 +674,8 @@ footer{
     font-size:15px;
 }
 .hero-text h1{
-    font-size:46px;
+    font-size:42px;
+    line-height:1.15;
 }
 
 .newsletter input,
