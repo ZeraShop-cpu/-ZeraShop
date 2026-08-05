@@ -1,370 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZeraShop</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-</head>
-<body>
-
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-<h2>ZeraShop</h2>
-</div>
-
-<ul class="menu">
-<li><a href="#">Home</a></li>
-<li><a href="#">Shop</a></li>
-<li><a href="#">Categories</a></li>
-<li><a href="#">Best Sellers</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-
-<div class="icons">
-<i class="fa-solid fa-magnifying-glass"></i>
-<i class="fa-regular fa-heart"></i>
-<i class="fa-solid fa-cart-shopping"></i>
-<i class="fa-regular fa-user"></i>
-</div>
-
-</nav>
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h4>WELCOME TO ZERASHOP</h4>
-
-<h1>Premium Quality.<br>Luxury Experience.</h1>
-
-<p>
-Discover premium products with a modern shopping experience.
-Everything you need in one luxury store.
-</p>
-
-<div class="buttons">
-<a href="#" class="btn1">Shop Now</a>
-<a href="#" class="btn2">Explore</a>
-</div>
-
-</div>
-
-<div class="hero-image">
-<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop" alt="Hero">
-</div>
-
-</section>
-
-</header>
-
-<section class="products">
-
-<h2 class="section-title">Featured Products</h2>
-
-<div class="product-grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="">
-<h3>Nike Shoes</h3>
-<p>$129</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600" alt="">
-<h3>Premium T-Shirt</h3>
-<p>$49</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600" alt="">
-<h3>Luxury Watch</h3>
-<p>$249</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600" alt="">
-<h3>Leather Bag</h3>
-<p>$199</p>
-<button>Buy Now</button>
-</div>
-
-</div>
-
-</section>
-
-</body>
-</html>
-.products{
-    width:90%;
-    margin:80px auto;
-}
-
-.section-title{
-    text-align:center;
-    font-size:40px;
-    color:#d4af37;
-    margin-bottom:40px;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#181818;
-    border-radius:20px;
-    overflow:hidden;
-    text-align:center;
-    transition:.4s;
-    padding-bottom:25px;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(212,175,55,.25);
-}
-
-.card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-}
-
-.card h3{
-    margin-top:20px;
-    font-size:22px;
-}
-
-.card p{
-    color:#d4af37;
-    margin:12px 0;
-    font-size:20px;
-}
-
-.card button{
-    padding:12px 30px;
-    border:none;
-    border-radius:40px;
-    background:#d4af37;
-    color:#000;
-    cursor:pointer;
-    font-weight:600;
-    transition:.3s;
-}
-
-.card button:hover{
-    transform:scale(1.08);
-}
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#0d0d0d;
-    color:#fff;
-    overflow-x:hidden;
+background:#0d0d0d;
+color:#fff;
+overflow-x:hidden;
 }
 
 /* Navbar */
 
 .navbar{
-    width:90%;
-    margin:auto;
-    height:90px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+width:90%;
+margin:auto;
+height:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo h2{
-    color:#d4af37;
-    font-size:32px;
-    font-weight:700;
+font-size:32px;
+font-weight:700;
+color:#d4af37;
 }
 
 .menu{
-    display:flex;
-    gap:35px;
-    list-style:none;
+display:flex;
+gap:35px;
+list-style:none;
 }
 
 .menu a{
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
 }
 
 .menu a:hover{
-    color:#d4af37;
+color:#d4af37;
 }
 
 .icons{
-    display:flex;
-    gap:20px;
+display:flex;
+gap:22px;
 }
 
 .icons i{
-    cursor:pointer;
-    transition:.3s;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
 }
 
 .icons i:hover{
-    color:#d4af37;
-    transform:scale(1.2);
+color:#d4af37;
+transform:scale(1.2);
 }
 
 /* Hero */
 
 .hero{
-    width:90%;
-    margin:auto;
-    min-height:85vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+width:90%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:85vh;
 }
 
 .hero-text{
-    width:48%;
+width:48%;
+animation:fadeUp 1s;
 }
 
 .hero-text h4{
-    color:#d4af37;
-    letter-spacing:3px;
-    margin-bottom:15px;
+color:#d4af37;
+letter-spacing:4px;
+margin-bottom:15px;
 }
 
 .hero-text h1{
-    font-size:65px;
-    line-height:1.1;
-    margin-bottom:20px;
+font-size:65px;
+line-height:1.1;
+margin-bottom:25px;
 }
 
 .hero-text p{
-    color:#bdbdbd;
-    line-height:30px;
-    margin-bottom:35px;
+color:#c9c9c9;
+line-height:30px;
+margin-bottom:40px;
 }
 
 .buttons{
-    display:flex;
-    gap:20px;
-}
-
-.btn1,.btn2{
-    padding:15px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    transition:.3s;
+display:flex;
+gap:20px;
 }
 
 .btn1{
-    background:#d4af37;
-    color:#000;
+padding:15px 38px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
 }
 
 .btn2{
-    border:2px solid #d4af37;
-    color:#d4af37;
+padding:15px 38px;
+border:2px solid #d4af37;
+color:#d4af37;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
 }
 
-.btn1:hover,
+.btn1:hover{
+transform:translateY(-6px);
+}
+
 .btn2:hover{
-    transform:translateY(-5px);
+background:#d4af37;
+color:black;
 }
 
 .hero-image{
-    width:48%;
+width:48%;
+display:flex;
+justify-content:center;
 }
 
 .hero-image img{
-    width:100%;
-    border-radius:25px;
-    animation:float 4s ease-in-out infinite;
-    box-shadow:0 20px 60px rgba(212,175,55,.25);
+width:100%;
+max-width:600px;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(212,175,55,.25);
+animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-18px);
+}
 }
 
-/* Products */
-
-.products{
-    width:90%;
-    margin:80px auto;
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-.section-title{
-    text-align:center;
-    font-size:42px;
-    color:#d4af37;
-    margin-bottom:40px;
+/* Mobile */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:40px;
 }
 
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+.hero-text,
+.hero-image{
+width:100%;
 }
 
-.card{
-    background:#181818;
-    border-radius:20px;
-    overflow:hidden;
-    text-align:center;
-    transition:.4s;
+.hero-text h1{
+font-size:42px;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(212,175,55,.25);
+.menu{
+display:none;
 }
 
-.card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
+.buttons{
+justify-content:center;
+margin-bottom:30px;
 }
 
-.card h3{
-    margin:20px 0 10px;
+.hero-image img{
+max-width:90%;
 }
 
-.card p{
-    color:#d4af37;
-    font-size:20px;
-}
-
-.card button{
-    margin:20px 0 30px;
-    padding:12px 28px;
-    border:none;
-    background:#d4af37;
-    color:#000;
-    border-radius:40px;
-    cursor:pointer;
 }
