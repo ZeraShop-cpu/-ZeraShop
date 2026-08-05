@@ -662,3 +662,36 @@ color:#000;
     color:#ff2d55;
     transform:scale(1.2);
 }
+.icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.icons a{
+    color:#222;
+    text-decoration:none;
+    font-size:22px;
+    transition:0.3s;
+    position:relative;
+}
+
+.icons a:hover{
+    color:#2563eb;
+    transform:scale(1.15);
+}
+
+#cart-count{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:red;
+    color:white;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    font-size:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
