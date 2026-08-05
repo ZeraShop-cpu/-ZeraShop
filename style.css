@@ -282,3 +282,170 @@ font-size:20px;
 
 opacity:.9;
 }
+/*=========================
+POPULAR
+=========================*/
+
+.popular{
+
+background:#fff;
+
+padding:60px;
+
+display:grid;
+
+grid-template-columns:320px 1fr 350px;
+
+gap:50px;
+}
+
+.popular-left h2{
+
+margin-bottom:25px;
+
+color:#222;
+}
+
+.popular-card{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:18px;
+
+background:#fff;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+margin-bottom:20px;
+}
+
+.popular-card img{
+
+width:75px;
+}
+
+.popular-card h4{
+
+margin-left:auto;
+
+color:#7d4cff;
+}
+
+.sale{
+
+text-align:center;
+}
+
+.sale h1{
+
+font-size:72px;
+
+color:#24135f;
+
+line-height:1;
+}
+
+.sale h2{
+
+margin:35px auto;
+
+width:350px;
+
+height:90px;
+
+border:2px solid #bbb;
+
+border-radius:100px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:42px;
+
+color:#ff53b5;
+}
+
+.sale a{
+
+text-decoration:none;
+
+font-size:22px;
+
+color:#6f49ff;
+}
+
+.review h2{
+
+font-size:34px;
+
+color:#6f49ff;
+
+line-height:1.4;
+}
+
+.review p{
+
+margin:30px 0;
+
+line-height:30px;
+
+color:#666;
+}
+
+.author{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+}
+
+.author img{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+}
+
+.brands{
+
+background:#fff;
+
+padding:50px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+}
+
+.brands img{
+
+height:35px;
+
+opacity:.7;
+}
+
+footer{
+
+background:#fff;
+
+text-align:center;
+
+padding:35px;
+
+color:#666;
+}
