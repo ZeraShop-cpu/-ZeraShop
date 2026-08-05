@@ -487,3 +487,147 @@ footer{
 }
 
 }
+/* =========================
+   LUXURY EFFECTS
+========================= */
+
+body{
+    background:
+    radial-gradient(circle at top right, rgba(212,175,55,.08), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(212,175,55,.06), transparent 35%),
+    #0d0d0d;
+}
+
+/* Smooth Animation */
+
+.hero-text,
+.hero-image,
+.category-card,
+.card,
+.feature-card,
+.sale-banner,
+.newsletter,
+footer{
+    animation:fadeUp .9s ease both;
+}
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Luxury Hover */
+
+.card,
+.category-card,
+.feature-card{
+    position:relative;
+}
+
+.card::before,
+.category-card::before,
+.feature-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.18),
+transparent
+);
+
+transition:.8s;
+
+}
+
+.card:hover::before,
+.category-card:hover::before,
+.feature-card:hover::before{
+
+left:100%;
+
+}
+
+/* Buttons */
+
+.btn1,
+.btn2,
+.card button,
+.newsletter button{
+
+transition:.35s;
+
+}
+
+.btn1:hover,
+.btn2:hover,
+.card button:hover,
+.newsletter button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:0 15px 35px rgba(212,175,55,.35);
+
+}
+
+/* Images */
+
+.hero-image img,
+.card img,
+.category-card img{
+
+transition:.5s;
+
+}
+
+.hero-image img:hover,
+.card:hover img,
+.category-card:hover img{
+
+transform:scale(1.06);
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d4af37;
+border-radius:30px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#f1cf58;
+}
+
+/* Selection */
+
+::selection{
+background:#d4af37;
+color:#000;
+}
