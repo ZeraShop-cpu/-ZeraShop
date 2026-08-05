@@ -64,3 +64,16 @@ nav.style.boxShadow="none";
 }
 
 });
+let cart = 0;
+
+document.querySelectorAll(".card button").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+cart++;
+
+document.getElementById("cart-count").innerText = cart;
+
+});
+
+});
