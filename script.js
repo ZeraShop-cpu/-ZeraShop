@@ -92,3 +92,18 @@ document.querySelectorAll(".card button").forEach(button => {
     });
 
 });
+const wishlistBtn = document.getElementById("wishlist-btn");
+
+wishlistBtn.addEventListener("click", () => {
+
+    wishlistBtn.classList.toggle("active");
+
+    if(wishlistBtn.classList.contains("active")){
+        wishlistBtn.classList.remove("fa-regular");
+        wishlistBtn.classList.add("fa-solid");
+    }else{
+        wishlistBtn.classList.remove("fa-solid");
+        wishlistBtn.classList.add("fa-regular");
+    }
+
+});
