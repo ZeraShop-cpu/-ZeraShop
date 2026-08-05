@@ -77,3 +77,18 @@ document.getElementById("cart-count").innerText = cart;
 });
 
 });
+let cart = 0;
+
+const cartCount = document.getElementById("cart-count");
+
+document.querySelectorAll(".card button").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        cart++;
+
+        cartCount.textContent = cart;
+
+    });
+
+});
