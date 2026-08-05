@@ -1,87 +1,284 @@
-.featured-products{
-    padding:80px 7%;
-    background:#0b0b0b;
+/* =========================
+GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-.section-title{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    margin-bottom:35px;
+body{
+background:#332b67;
 }
 
-.section-title span{
-    color:#d4af37;
-    font-size:13px;
-    letter-spacing:2px;
+.container{
+width:92%;
+margin:auto;
 }
 
-.section-title h2{
-    color:#fff;
-    font-size:42px;
-    margin-top:8px;
+/* =========================
+HEADER
+========================= */
+
+header{
+padding:35px 0 0;
 }
 
-.view-all{
-    color:#d4af37;
-    text-decoration:none;
-    font-size:16px;
+nav{
+
+background:#fff;
+
+border-radius:25px 25px 0 0;
+
+height:90px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 45px;
 }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+.logo h2{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#2f206e;
 }
 
-.product-card{
-    background:#141414;
-    border:1px solid #2c2c2c;
-    border-radius:22px;
-    padding:20px;
-    transition:.4s;
+.logo span{
+
+color:#6f49ff;
 }
 
-.product-card:hover{
-    transform:translateY(-10px);
-    border-color:#d4af37;
-    box-shadow:0 15px 40px rgba(212,175,55,.25);
+.menu{
+
+display:flex;
+
+gap:45px;
+
+list-style:none;
 }
 
-.product-image{
-    width:100%;
-    height:220px;
-    background:#1d1d1d;
-    border-radius:16px;
-    margin-bottom:20px;
+.menu a{
+
+text-decoration:none;
+
+color:#333;
+
+font-size:17px;
+
+font-weight:500;
 }
 
-.product-card h3{
-    color:#fff;
-    font-size:22px;
-    margin-bottom:10px;
+.login-btn{
+
+background:#1d2d7a;
+
+padding:14px 28px;
+
+border-radius:12px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:600;
 }
 
-.price{
-    color:#d4af37;
-    font-size:24px;
-    font-weight:700;
-    display:block;
-    margin-bottom:20px;
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+width:92%;
+
+margin:auto;
+
+background:linear-gradient(135deg,#8a3cf2,#1f2b73);
+
+border-radius:0 0 30px 30px;
+
+padding:70px 60px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr 320px;
+
+align-items:center;
+
+color:#fff;
 }
 
-.product-card button{
-    width:100%;
-    height:48px;
-    border:1px solid #d4af37;
-    background:transparent;
-    color:#d4af37;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
+.hero-left h1{
+
+font-size:76px;
+
+line-height:1.05;
+
+margin-bottom:25px;
 }
 
-.product-card button:hover{
-    background:#d4af37;
-    color:#111;
+.hero-left p{
+
+font-size:20px;
+
+line-height:34px;
+
+opacity:.9;
+
+max-width:520px;
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+margin:40px 0;
+}
+
+.shop-btn{
+
+width:220px;
+
+height:65px;
+
+border:2px solid #a85eff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:14px;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:600;
+}
+
+.play-btn{
+
+width:65px;
+
+height:65px;
+
+background:#ff49ca;
+
+border-radius:15px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:24px;
+}
+
+.experience{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+margin-top:30px;
+}
+
+.circle{
+
+width:55px;
+
+height:55px;
+
+border:2px solid #fff;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+}
+
+.hero-center{
+
+display:flex;
+
+justify-content:center;
+}
+
+.hero-center img{
+
+width:480px;
+}
+
+.hero-right{
+
+padding-left:30px;
+}
+
+.review-card{
+
+background:#fff;
+
+padding:15px;
+
+border-radius:20px;
+
+display:flex;
+
+gap:15px;
+
+color:#222;
+
+margin-bottom:40px;
+}
+
+.review-card img{
+
+width:75px;
+
+height:75px;
+
+border-radius:15px;
+
+object-fit:cover;
+}
+
+.stats h2{
+
+font-size:58px;
+
+margin-top:15px;
+}
+
+.stats span{
+
+font-size:20px;
+
+opacity:.9;
 }
