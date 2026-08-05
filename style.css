@@ -449,3 +449,157 @@ padding:35px;
 
 color:#666;
 }
+/* ===========================
+BACKGROUND CIRCLES
+=========================== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-260px;
+    top:-180px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    right:-120px;
+    top:-40px;
+}
+
+/* ===========================
+BUTTON EFFECTS
+=========================== */
+
+.shop-btn,
+.play-btn,
+.login-btn{
+    transition:.35s;
+}
+
+.shop-btn:hover{
+
+    background:#ff49ca;
+
+    border-color:#ff49ca;
+
+    transform:translateY(-5px);
+}
+
+.play-btn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 15px 35px rgba(255,70,200,.45);
+}
+
+.login-btn:hover{
+
+    background:#3246aa;
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+.popular-card{
+
+transition:.35s;
+
+cursor:pointer;
+}
+
+.popular-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* ===========================
+REVIEW CARD
+=========================== */
+
+.review-card{
+
+box-shadow:0 20px 45px rgba(0,0,0,.20);
+}
+
+.review-card h4{
+
+margin-bottom:6px;
+}
+
+.review-card p{
+
+margin-top:8px;
+
+color:#777;
+}
+
+/* ===========================
+STATS
+=========================== */
+
+.stats{
+
+margin-top:35px;
+}
+
+.stats h2{
+
+font-size:62px;
+
+font-weight:700;
+}
+
+.stats span{
+
+display:block;
+
+margin-bottom:25px;
+
+font-size:18px;
+
+opacity:.85;
+}
+
+/* ===========================
+BRANDS
+=========================== */
+
+.brands img{
+
+transition:.3s;
+
+cursor:pointer;
+}
+
+.brands img:hover{
+
+opacity:1;
+
+transform:scale(1.08);
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+border-top:1px solid #eee;
+}
